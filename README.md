@@ -4,7 +4,7 @@ Aa repository ma simple HTML & CSS use kari banaveli **Jewelry Collection Websit
 Website ma earrings, hairbands ane culcher ni collections alag-alag pages par banavi che.  
 
 ## 🌐 Live Website  
-👉 [Click Here](https://yourusername.github.io/yourrepo/)  
+👉 [Click Here]( https://klarity-oss.github.io/klarity.github.io/)  
 
 
 ## 📂 Pages  
