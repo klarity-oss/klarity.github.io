@@ -6,7 +6,6 @@ Website ma earrings, hairbands ane culcher ni collections alag-alag pages par ba
 ## 🌐 Live Website  
 👉 [Click Here](https://yourusername.github.io/yourrepo/)  
 
-*(username ane repo name tamaru mukvu)*  
 
 ## 📂 Pages  
 - Home (index.html)  
@@ -20,4 +19,4 @@ Website ma earrings, hairbands ane culcher ni collections alag-alag pages par ba
 - Easy navigation with “Back to Home” & “Back to Categories” links  
 
 ## 👩 Author  
-Created with ❤️ by **Klrity**  
+Created with ❤️ by **Klarity**  
