@@ -1,1 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anadea Jewellery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+    }
+
+    /* Header */
+    .top-bar {
+      background: #895737;
+      color: #fff;
+      text-align: center;
+      font-family: "Georgia", serif;
+      padding: 8px;
+      font-size: 28px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 30px 80px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #5E3023;
+    }
+
+    .search-box input {
+      padding: 8px;
+      width: 500px;
+      border: 1px solid #333;
+      border-radius: 20px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      background: #ECD9BA;
+      padding: 12px;
+      padding-top: 5px;   /* Text upar khase */
+      padding-bottom: 25px; /* optional, niche space aapse */
+      border-bottom: 1px solid #ddd;
+    }
+
+
+    .menu a {
+      text-decoration: italic;
+      font-family: "Georgia", serif;
+      color: #333;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 0.2;             /* text alignment fix */
+      display: flex;
+      text-align: center;
+}
+  .search-box {
+  width: 100%;       /* Full row */
+  padding: 10px;     /* Inner space */
+  font-size: 16px;   /* Text size */
+  border: 1px solid #F3E9DC;
+  border-radius: 5px;
+  box-sizing: border-box; /* Important: padding count thase inside */
+}
+.slider-container {
+  position: relative;
+  width: 100%;              /* full page width */
+  max-width: 500px;         /* 👈 image slider ni max size control */
+  height: 500px;            /* fix height jethi photo cut na thay */
+  overflow: hidden;
+  margin: 20px auto;        /* center ma set */
+  border-radius: 10px;
+  background: #fff;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;       /* image cut na thay */
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 10px;
+  border-radius: 50%;
+  z-index: 50;
+}
+
+.prev { left: 20px; }   /* 👈 ab badhu andar rahse */
+.next { right: 20px; }
+
+  
+</style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">ANADEA JEWELLERY ✨💍👑 💎</div>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo"></div>
+    <div class="search-box">
+     <input type="text" placeholder="Search for products" class="search-box">
+
+    </div>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Icons Example</title>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .icons {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      font-size: 26px;
+    }
+    .cart {
+      position: relative;
+    }
+    .cart-count {
+      position: absolute;
+      top: -10px;
+      right: -15px;
+      background: #4CAF50; /* gold color */
+      color: white;
+      border-radius: 50%;
+      padding: 3px 8px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="icons">
+    <!-- Wishlist -->
+    <i class="fa-regular fa-heart"></i>
+
+    <!-- Cart with item count -->
+    <div class="cart">
+      <i class="fa-solid fa-bag-shopping"></i>
+    </div>
+
+    <!-- User -->
+    <i class="fa-regular fa-user"></i>
+  </div>
+
+</body>
+</html>
+
+  </div>
+
+  <!-- Menu -->
+  <div class="menu">
+    <a href="#">Necklace Set</a>
+    <a href="#">Earrings</a>
+    <a href="#">Bangles</a>
+    <a href="#">Hand Bag</a>
+    <a href="#">Men's Bracelet</a>
+    <a href="#">Juda</a>
+    <a href="#">Saree Pin</a>
+    <a href="#">Maang Tikka</a>
+  </div>
+
+  <!-- Image Slider -->
+  <body>
+  <div class="slider-container">
+    <div class="slider" id="slider">
+      <div class="slide"><img src="EArning.png" alt="photo 1"></div>
+      <div class="slide"><img src="EArning.png" alt="photo 2"></div>
+      <div class="slide"><img src="EArning.png" alt="photo 3"></div>
+    </div>
+    <button class="prev" onclick="prevSlide()">❮</button>
+    <button class="next" onclick="nextSlide()">❯</button>
+  </div>
+
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+    const totalSlides = slides.length;
+    const slider = document.getElementById("slider");
+
+    function updateSlider() {
+      slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlider();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlider();
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories</title>
+  <style>
+    body {
+       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F3E9DC;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #5E3023;
+      margin-bottom: 50px;
+  font-size: 60px;  
+  font-weight: bold;
+    }
+    .categories {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .categories img {
+      width: 400px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+    a {
+      display: block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #4CAF50;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Our Categories</h1>
+
+<div class="categories">
+ 
+<a href="rings.html" class="ring-link">
+  <img src="rings.png" alt="Rings">
+</a>
+
+<style>
+  .ring-link {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+
+  .ring-link:hover {
+    background-color: #E1B995; /* hover ma background color */
+  }
+</style>
+<a href="earrings.html" class="earrings-link">
+  <img src="earrings.png" alt="earrings">
+</a>
+
+<style>
+  .earrings-link {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+
+  .earrings-link:hover {
+    background-color: #E1B995; /* hover ma background color */
+  }
+
+</style>
+<a href="hairband.html" class="hairband-link">
+  <img src="hairband.png" alt="hairband">
+</a>
+
+<style>
+  .hairband-link {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+
+  .hairband-link:hover {
+    background-color: #E1B995; /* hover ma background color */
+  }
+
+</style>
+
+
+<style>
+  .img-swap {
+    position: relative;
+    display: inline-block;
+  }
+  .img-swap img {
+    display: block;
+    transition: 0.3s;
+  }
+  .img-swap img.top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 1;
+  }
+  .img-swap:hover img.top {
+    opacity: 0; /* hover karta first image gayab */
+  }
+</style>
+ <a href="index.html" class="back-btn">Back to Home</a>
+
+<style>
+  .back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #964B00;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    position: fixed;
+    bottom: 20px;   /* bottom ma set */
+    left: 50%;
+    transform: translateX(-50%); /* center ma lai javanu */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  .back-btn:hover {
+    background-color: #D2B48C; /* hover effect */
+  }
+</style>
+
+</html>
+
 
